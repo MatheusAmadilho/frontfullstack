@@ -1,0 +1,13 @@
+{
+  "files": {
+    "main.css": "/frontfullstack/static/css/main.f04fa7ef.css",
+    "main.js": "/frontfullstack/static/js/main.c8e21ff0.js",
+    "index.html": "/frontfullstack/index.html",
+    "main.f04fa7ef.css.map": "/frontfullstack/static/css/main.f04fa7ef.css.map",
+    "main.c8e21ff0.js.map": "/frontfullstack/static/js/main.c8e21ff0.js.map"
+  },
+  "entrypoints": [
+    "static/css/main.f04fa7ef.css",
+    "static/js/main.c8e21ff0.js"
+  ]
+}
