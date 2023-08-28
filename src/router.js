@@ -6,7 +6,7 @@ export function Router(){
     return(
         <BrowserRouter>
             <Routes>
-                <Route path='/cadastro-animal' element={<CadastroAnimal />} />
+                <Route path='/' element={<CadastroAnimal />} />
             </Routes>
         </BrowserRouter>
     )
