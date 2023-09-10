@@ -2,7 +2,7 @@ import { Button, Container, Table } from "react-bootstrap";
 import { FaEdit, FaSearch, FaTrash } from "react-icons/fa";
 import "./TabelaDenuncia.css";
 import { urLBase } from "../api/index.js";
-
+import vetor3 from "../imagens/vector-3.svg"
 
 export  function TabelaDenuncia(props) {
   // const [denuncia, setDenuncia] = useState(props.listadedenuncias);
@@ -59,13 +59,13 @@ export  function TabelaDenuncia(props) {
       <div className="titulo_tabela_denuncias">
               <img
                 className="vector vectorEntrada"
-                src={"vector-3.svg"}
+                src={vetor3}
                 alt="Vector"
               />
-              <div>
+      
                 <span className="span0">Denuncias </span><span className="span1">Realizadas</span>
               </div>
-            </div>
+          
 
       <div className="group_pesquisa">
         {/* <div className="search_denuncia"> */}

@@ -33,11 +33,11 @@
 }
 
 .infos {
-  width: auto;
+  align-items: flex-start;
   display: flex;
   gap: 30px;
   margin-top: 32px;
-  /* min-width: 312px; */
+  min-width: 312px;
 }
 
 .fone {

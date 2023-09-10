@@ -1,14 +1,9 @@
 import React from "react";
 import {
   FaHome,
-  FaDog,
-  FaUserAlt,
-  FaHandHoldingHeart,
-  FaChartBar,
   FaRegWindowClose,
-  FaSignInAlt,
-  FaListUl,
-  FaBoxOpen,
+  FaChartBar,
+  FaDog
 } from "react-icons/fa";
 import "./Sidebar.css";
 import { SidebarItem } from "./SidebarItem";
@@ -21,32 +16,21 @@ export function Sidebar({ active }) {
         <Link to="/">
             <SidebarItem Icon={FaHome} Text="Home" />
         </Link>
-        <Link to="/login">
+        {/*<Link to="/login">
             <SidebarItem Icon={FaUserAlt} Text="Login" />
         </Link>
-        <Link to="/cadastro">
-            <SidebarItem Icon={FaSignInAlt} Text="Usuários" />
-        </Link>
-        {/* <Link to="/pets">
-            <SidebarItem Icon={FaDog} Text="Animais" />
-        </Link> */}
-        <Link to="/cadastro-animal">
-            <SidebarItem Icon={FaDog} Text="Cad. Animais" />
+         <Link to="/cadastro">
+            <SidebarItem Icon={FaSignInAlt} Text="Registro" />
         </Link>
         <Link to="/cadastro-voluntario">
             <SidebarItem Icon={FaHandHoldingHeart} Text="Voluntários" />
+        </Link> */}
+        <Link to="/cadastro-animais">
+            <SidebarItem Icon={FaDog} Text="Animais" />
         </Link>
-        <Link to="/designar-voluntario">
-            <SidebarItem Icon={FaListUl} Text="Desig. Ativid." />
-        </Link>
-        <Link to="/cadastro-produto">
-            <SidebarItem Icon={FaChartBar} Text="Produtos" />
-        </Link>
-        <Link to="/lancar-entrada">
-            <SidebarItem Icon={FaBoxOpen} Text="Entradas" />
-        </Link>
-        <Link to="/cadastro-denuncia">
-            <SidebarItem Icon={FaRegWindowClose} Text="Denuncias" />
+        
+        <Link to="/cadastro-adocao">
+            <SidebarItem Icon={FaChartBar} Text="Adoções" />
         </Link>
       </div>
     </div>

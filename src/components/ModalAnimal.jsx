@@ -1,36 +1,16 @@
+import React, { useState } from "react";
 import { MagnifyingGlass, Pencil, Trash, X } from "@phosphor-icons/react";
 import './Modal.css'
 import { excluirAnimais, getAnimais } from "../api/index";
-import { useState } from "react";
 
 export function Modal(props) {
   const { title, tableHead, registerAll, setRegisterAll, setFormValidate, ChangeValueObject, setModal } = props;
-  console.log(registerAll);
   const [search, setSearch] = useState("");
 
   function editRegister(register, index) {
     if (ChangeValueObject) {
       ChangeValueObject(register);
     }
-
-    if (register.email !== undefined) {
-      const auxRegisters = {
-        edit: index,
-        email: register.email,
-        enderecoRua: register.endereco?.split(" - ")[0],
-        enderecoNumero: register.endereco?.split(" - ")[1],
-        enderecoCep: register.endereco?.split(" - ")[2],
-        enderecoCidade: register.endereco?.split(" - ")[3],
-        id: register.id,
-        nome: register.nome,
-        senha: register.senha,
-        senhaConfirmar: register.senha,
-        telefone: register.telefone,
-      };
-
-      setFormValidate(auxRegisters);
-    }
-
     setFormValidate(register);
   }
 
@@ -85,20 +65,16 @@ export function Modal(props) {
             {registerAll !== undefined && registerAll.length > 0 &&
               registerAll
                 .filter((register) =>
-                  Object.values(register.nome)
-                    .join("")
-                    .toLowerCase()
-                    .includes(search.toLowerCase())
+                  register.nome.toLowerCase().includes(search.toLowerCase())
                 )
                 .map((registerInput, index) => {
-                  const register = Object.values(registerInput);
-
                   return (
                     <tr key={index}>
-                      {register.map((registerInput, index) => (
-                        <td key={index}>{registerInput}</td>
-                      )
-                      )}
+                      {Object.values(registerInput).map((registerInput, index) => (
+                        <td key={index}>
+                          {registerInput}
+                        </td>
+                      ))}
                       <td>
                         <Pencil
                           size={32}

@@ -10,9 +10,7 @@
 .aside-header {
   display: flex;
   flex-direction: row;
-  justify-content: center;
   gap: 20px;
-  width: auto;
 }
 
 .aside-header img {

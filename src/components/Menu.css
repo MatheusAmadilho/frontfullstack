@@ -8,7 +8,6 @@
   cursor: pointer;
   border-radius: 10px;
   transition: all 1s;
-  width: auto;
 }
 
 .container-menu:hover {

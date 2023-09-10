@@ -1,7 +1,7 @@
 import { onChangeInput } from "../util";
 import './InputsForm.css'
 
-export function InputsForm({ infoInput, index, formValidate, setFormValidate, classNameLabel}) {
+export function InputsForm({ infoInput, index, formValidate, setFormValidate }) {
 
 
   function handleFormValidateChecked( inputFormInput, indexFormInput, name, value) {
@@ -46,10 +46,8 @@ export function InputsForm({ infoInput, index, formValidate, setFormValidate, cl
           required={infoInput.required}
           minLength={infoInput.minlength}
           maxLength={infoInput.maxLength}
-          onInput={infoInput.onInput}
-          
         />
-        <label className={`infoInput.labelClass ${classNameLabel}`} htmlFor={infoInput.labelFor}>
+        <label className={infoInput.labelClass} htmlFor={infoInput.labelFor}>
           {infoInput.label}
         </label>
       </div>

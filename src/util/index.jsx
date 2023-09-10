@@ -155,26 +155,6 @@ export const aceitarFazerArray = [
   },
 ];
 
-export const listadedenuncias = [
-  {
-      id:"1",
-      rua: "R. das Margaridas ",
-      numero: "123",
-      cep: "19060-260",
-      cidade: "Presidente Prudente",
-      observacoes: "Sem comida",
-      tel: ""
-  },
-  {   
-      id:"2",
-      rua: "R. das Aboboras",
-      numero: "321",
-      cep: "19060-120",
-      cidade: "Pres. Prudente",
-      observacoes: "Não tem onde dormir",
-      tel: "(18)99999-9999"
-  },
-];
 
 export function ObjectEmptyValue(array) {
   for (let chave in array) {
@@ -189,71 +169,4 @@ export function onChangeInput(name, value, setFormInput, formInput) {
   setFormInput({ ...formInput, [name]: value });
 }
 
-
-///matheus
-export const BASE_URL = "http://localhost:4000";
-
-export const fetchData = async (url) => {
-  const response = await fetch(`${BASE_URL}${url}`, {
-    method: 'GET',
-    headers: {
-      'Content-Type': 'application/json',
-    },
-  });
-  if (!response.ok) {
-    throw new Error(`Erro ao buscar dados: ${response.status}`);
-  }
-  const responseData = await response.json();
-  return responseData;
-};
-
-export const postData = async (url, data) => {
-  const response = await fetch(`${BASE_URL}${url}`, {
-    method: 'POST',
-    headers: {
-      'Content-Type': 'application/json',
-    },
-    body: JSON.stringify(data),
-  });
-  if (!response.ok) {
-    throw new Error(`Erro ao adicionar dados: ${response.status}`);
-  }
-  const responseData = await response.json();
-  return responseData;
-};
-
-export async function putData (url, data) {
-  try {
-    await fetch(`${BASE_URL}${url}`, {
-      method: 'PUT',
-      headers: {
-        'Content-Type': 'application/json',
-      },
-      body: JSON.stringify(data),
-    })
-    .then(()=> alert('Entrada editada com sucesso!'))
-  } catch (error) {
-    console.log('Erro na requisição:', error);
-  }
-}
-
-export const deleteData = async (url) => {
-  const response = await fetch(`${BASE_URL}${url}`, {
-    method: 'DELETE',
-  });
-  if (!response.ok) {
-    throw new Error(`Erro ao excluir dados: ${response.status}`);
-  }
-};
-
-export async function getEntradas() {
-  let aux = [];
-  await fetch(BASE_URL+'/entradas', {
-      method: "GET",
-  })
-      .then((data) => data.json())
-      .then((res) => (aux = res))
-      .catch(e => console.log(e));
-
-  return aux;
-}
+export const urLBase = "https://129.146.68.51/aluno34-pfsii";
